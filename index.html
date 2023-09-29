@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital-Clock</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <video id="myVideo" autoplay muted loop>
+        <source src="Video/background.mp4" type="video/mp4">
+      </video>
+    <div class="container">
+        <div class="box1">
+            <div class="box ">
+                <div class="hou back" id="hou">
+                    00
+                </div>
+                <span class="coln">:</span>
+                <div class="min back" id="min">
+                    00
+                </div>
+                <span class="coln">:</span>
+                <div class="sec back" id="sec">
+                    00
+                </div>
+                <span class="pm" id="am"></span>
+            </div>
+            <div class="date" id="date">
+                <!-- feb 20 2004 -->
+            </div>
+        </div>
+        <div class="but">
+        <div class="button">
+            <a href="#" class="btn btn-white btn-animate start" id="stop">STOP</a>
+
+
+        </div>
+        <div class="button2">
+            <a href="#" class="btn btn-white btn-animate start" id="start">START</a>
+
+
+        </div>
+    </div>
+    </div>
+
+    <script src="JS/script.js"></script>
+</body>
+
+</html>

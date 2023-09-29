@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@500&family=Oswald:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#myVideo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+.back {
+    font-family: 'Fira Sans', sans-serif;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    border: 0.5px solid blueviolet;
+    background-size: 400% 400%;
+    animation: gradient 8s ease infinite;
+    padding: 1.5rem;
+    border-radius: 13px;
+    color: snow;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    position: relative;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.box {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    gap: 25px;
+    font-size: 3rem;
+    padding: 20px;
+}
+
+.box1 {
+    box-shadow: 1px 1px 1px #e73c7e, -1px -1px 2px blue;
+    border-radius: 10px;
+    background: rgba(237, 237, 253, 0.2);
+}
+
+.date {
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    color: snow;
+    text-shadow: 2px 2px 3px black;
+    margin-top: 5px;
+   font-family: 'Oswald', sans-serif;
+}
+
+.coln {
+    font-size: 5rem;
+    color: snow;
+}
+
+.but {
+    margin-top: 5%;
+    display: flex;
+    width: 13%;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.button a,
+.button2 a {
+    background: linear-gradient(-45deg, #23a6d5, blue);
+    color: snow;
+    box-shadow: 2px 2px 2px purple;
+    font-weight: 700;
+}
+
+.pm {
+    color: snow;
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.btn:link,
+.btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 40px;
+    display: inline-block;
+    border-radius: 100px;
+    transition: all .2s;
+    position: absolute;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-white {
+    background-color: #fff;
+    color: #777;
+}
+
+.btn::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+}
+
+.btn-white::after {
+    background-color: #fff;
+}
+
+.btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+
+.btn-animated {
+    animation: moveInBottom 5s ease-out;
+    animation-fill-mode: backwards;
+}
+
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@media screen and (max-width: 800px) {
+    /* body {
+        background-image: linear-gradient(to top, #00c6fb 0%, #005bea 100%);
+    }
+    #myvideo{
+        display: none;
+    } */
+    .but{
+        
+        width: 27%;
+        display: flex;
+        margin-left: -123px;
+    }
+    .box {
+        gap: 2px;
+        padding: 5px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* body {
+        background-image: linear-gradient(to top, #00c6fb 0%, #005bea 100%);
+    }
+    #myVideo {
+        display: none;
+    } */
+    .box {
+        gap: 2px;
+        padding: 5px;
+    }
+    .but{
+        margin-left: -70px;
+    }
+    .back{
+        padding: 0.6rem;
+        font-size: 30px;
+    }
+    .date{
+        font-size: 2rem;
+    }
+    .coln{
+        font-size: 3rem;
+    }
+    
+.btn:link,
+.btn:visited {
+    padding: 10px 15px;
+   
+}
+.pm{
+    font-size: 20px;
+}
+}
