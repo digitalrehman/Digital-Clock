@@ -19,7 +19,7 @@ let tast = () => {
     hour = (hour < 10) ? "0" + hour : hour;
     hou.innerText = hour;
 
-    let apm = hour >= 12 ? "PM" : "AM"
+    let apm = hour >= 12 ? "AM" : "PM"
     am.innerText = apm
 
     let minu = new Date().getMinutes()
